@@ -1,0 +1,456 @@
+bios_keyboard.o: bios_keyboard.cpp ../../include/dosbox.h ../../config.h \
+ ../../include/logging.h ../../include/callback.h ../../include/mem.h \
+ ../../include/mem.h ../../include/bios.h ../../include/keyboard.h \
+ ../../include/regs.h ../../include/inout.h ../../include/dos_inc.h \
+ ../../include/dos_system.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/vector \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/stl_algobase.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/psp/bits/c++config.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/psp/bits/os_defines.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/psp/bits/cpu_defines.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/functexcept.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/exception_defines.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/cpp_type_traits.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/ext/type_traits.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/ext/numeric_traits.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/stl_pair.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/move.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/concept_check.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/type_traits \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/stl_iterator_base_types.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/stl_iterator_base_funcs.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/debug/assertions.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/stl_iterator.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/ptr_traits.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/debug/debug.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/predefined_ops.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/allocator.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/psp/bits/c++allocator.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/ext/new_allocator.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/new \
+ /usr/local/pspdev/psp/include/c++/8.2.0/exception \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/exception.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/exception_ptr.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/cxxabi_init_exception.h \
+ /usr/local/pspdev/lib/gcc/psp/8.2.0/include/stddef.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/typeinfo \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/hash_bytes.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/nested_exception.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/memoryfwd.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/stl_construct.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/ext/alloc_traits.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/alloc_traits.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/stl_uninitialized.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/stl_vector.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/initializer_list \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/stl_bvector.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/functional_hash.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/range_access.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/vector.tcc \
+ ../../include/cross.h /usr/local/pspdev/psp/include/stdio.h \
+ /usr/local/pspdev/psp/include/_ansi.h \
+ /usr/local/pspdev/psp/include/newlib.h \
+ /usr/local/pspdev/psp/include/sys/config.h \
+ /usr/local/pspdev/psp/include/machine/ieeefp.h \
+ /usr/local/pspdev/psp/include/sys/features.h \
+ /usr/local/pspdev/lib/gcc/psp/8.2.0/include/stdarg.h \
+ /usr/local/pspdev/psp/include/sys/reent.h \
+ /usr/local/pspdev/psp/include/_ansi.h \
+ /usr/local/pspdev/psp/include/sys/_types.h \
+ /usr/local/pspdev/psp/include/machine/_types.h \
+ /usr/local/pspdev/psp/include/machine/_default_types.h \
+ /usr/local/pspdev/psp/include/sys/lock.h \
+ /usr/local/pspdev/psp/include/sys/types.h \
+ /usr/local/pspdev/psp/include/machine/types.h \
+ /usr/local/pspdev/psp/include/sys/stdio.h \
+ /usr/local/pspdev/psp/include/sys/stat.h \
+ /usr/local/pspdev/psp/include/time.h \
+ /usr/local/pspdev/psp/include/machine/time.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/string \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/stringfwd.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/char_traits.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/postypes.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/cwchar \
+ /usr/local/pspdev/psp/include/wchar.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/cstdint \
+ /usr/local/pspdev/lib/gcc/psp/8.2.0/include/stdint.h \
+ /usr/local/pspdev/psp/include/stdint.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/localefwd.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/psp/bits/c++locale.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/clocale \
+ /usr/local/pspdev/psp/include/locale.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/iosfwd \
+ /usr/local/pspdev/psp/include/c++/8.2.0/cctype \
+ /usr/local/pspdev/psp/include/ctype.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/ostream_insert.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/cxxabi_forced.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/stl_function.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/backward/binders.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/basic_string.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/ext/atomicity.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/psp/bits/gthr.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/psp/bits/gthr-default.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/psp/bits/atomic_word.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/ext/string_conversions.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/cstdlib \
+ /usr/local/pspdev/psp/include/stdlib.h \
+ /usr/local/pspdev/psp/include/machine/stdlib.h \
+ /usr/local/pspdev/psp/include/alloca.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/std_abs.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/cstdio \
+ /usr/local/pspdev/psp/include/c++/8.2.0/cerrno \
+ /usr/local/pspdev/psp/include/errno.h \
+ /usr/local/pspdev/psp/include/sys/errno.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/basic_string.tcc \
+ /usr/local/pspdev/psp/include/dirent.h \
+ /usr/local/pspdev/psp/include/sys/dirent.h \
+ /usr/local/pspdev/psp/sdk/include/pspiofilemgr_dirent.h \
+ /usr/local/pspdev/psp/sdk/include/pspiofilemgr_stat.h \
+ /usr/local/pspdev/psp/sdk/include/psptypes.h \
+ /usr/local/pspdev/psp/sdk/include/pspkerneltypes.h \
+ /usr/local/pspdev/psp/include/unistd.h \
+ /usr/local/pspdev/psp/include/sys/unistd.h ../../include/support.h \
+ /usr/local/pspdev/psp/include/string.h \
+ /usr/local/pspdev/psp/include/sys/cdefs.h \
+ /usr/local/pspdev/psp/include/sys/string.h \
+ /usr/local/pspdev/psp/include/strings.h \
+ /usr/local/pspdev/psp/include/SDL/SDL.h \
+ /usr/local/pspdev/psp/include/SDL/SDL_main.h \
+ /usr/local/pspdev/psp/include/SDL/SDL_stdinc.h \
+ /usr/local/pspdev/psp/include/SDL/SDL_config.h \
+ /usr/local/pspdev/psp/include/SDL/SDL_platform.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/stdlib.h \
+ /usr/local/pspdev/psp/include/inttypes.h \
+ /usr/local/pspdev/psp/include/iconv.h \
+ /usr/local/pspdev/psp/include/reent.h \
+ /usr/local/pspdev/psp/include/SDL/begin_code.h \
+ /usr/local/pspdev/psp/include/SDL/close_code.h \
+ /usr/local/pspdev/psp/include/SDL/SDL_audio.h \
+ /usr/local/pspdev/psp/include/SDL/SDL_error.h \
+ /usr/local/pspdev/psp/include/SDL/SDL_endian.h \
+ /usr/local/pspdev/psp/include/SDL/SDL_mutex.h \
+ /usr/local/pspdev/psp/include/SDL/SDL_thread.h \
+ /usr/local/pspdev/psp/include/SDL/SDL_rwops.h \
+ /usr/local/pspdev/psp/include/SDL/SDL_cdrom.h \
+ /usr/local/pspdev/psp/include/SDL/SDL_cpuinfo.h \
+ /usr/local/pspdev/psp/include/SDL/SDL_events.h \
+ /usr/local/pspdev/psp/include/SDL/SDL_active.h \
+ /usr/local/pspdev/psp/include/SDL/SDL_keyboard.h \
+ /usr/local/pspdev/psp/include/SDL/SDL_keysym.h \
+ /usr/local/pspdev/psp/include/SDL/SDL_mouse.h \
+ /usr/local/pspdev/psp/include/SDL/SDL_video.h \
+ /usr/local/pspdev/psp/include/SDL/SDL_joystick.h \
+ /usr/local/pspdev/psp/include/SDL/SDL_quit.h \
+ /usr/local/pspdev/psp/include/SDL/SDL_loadso.h \
+ /usr/local/pspdev/psp/include/SDL/SDL_timer.h \
+ /usr/local/pspdev/psp/include/SDL/SDL_version.h
+
+../../include/dosbox.h:
+
+../../config.h:
+
+../../include/logging.h:
+
+../../include/callback.h:
+
+../../include/mem.h:
+
+../../include/mem.h:
+
+../../include/bios.h:
+
+../../include/keyboard.h:
+
+../../include/regs.h:
+
+../../include/inout.h:
+
+../../include/dos_inc.h:
+
+../../include/dos_system.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/vector:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/stl_algobase.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/psp/bits/c++config.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/psp/bits/os_defines.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/psp/bits/cpu_defines.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/functexcept.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/exception_defines.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/cpp_type_traits.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/ext/type_traits.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/ext/numeric_traits.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/stl_pair.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/move.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/concept_check.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/type_traits:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/stl_iterator_base_types.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/stl_iterator_base_funcs.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/debug/assertions.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/stl_iterator.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/ptr_traits.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/debug/debug.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/predefined_ops.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/allocator.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/psp/bits/c++allocator.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/ext/new_allocator.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/new:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/exception:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/exception.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/exception_ptr.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/cxxabi_init_exception.h:
+
+/usr/local/pspdev/lib/gcc/psp/8.2.0/include/stddef.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/typeinfo:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/hash_bytes.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/nested_exception.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/memoryfwd.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/stl_construct.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/ext/alloc_traits.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/alloc_traits.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/stl_uninitialized.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/stl_vector.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/initializer_list:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/stl_bvector.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/functional_hash.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/range_access.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/vector.tcc:
+
+../../include/cross.h:
+
+/usr/local/pspdev/psp/include/stdio.h:
+
+/usr/local/pspdev/psp/include/_ansi.h:
+
+/usr/local/pspdev/psp/include/newlib.h:
+
+/usr/local/pspdev/psp/include/sys/config.h:
+
+/usr/local/pspdev/psp/include/machine/ieeefp.h:
+
+/usr/local/pspdev/psp/include/sys/features.h:
+
+/usr/local/pspdev/lib/gcc/psp/8.2.0/include/stdarg.h:
+
+/usr/local/pspdev/psp/include/sys/reent.h:
+
+/usr/local/pspdev/psp/include/_ansi.h:
+
+/usr/local/pspdev/psp/include/sys/_types.h:
+
+/usr/local/pspdev/psp/include/machine/_types.h:
+
+/usr/local/pspdev/psp/include/machine/_default_types.h:
+
+/usr/local/pspdev/psp/include/sys/lock.h:
+
+/usr/local/pspdev/psp/include/sys/types.h:
+
+/usr/local/pspdev/psp/include/machine/types.h:
+
+/usr/local/pspdev/psp/include/sys/stdio.h:
+
+/usr/local/pspdev/psp/include/sys/stat.h:
+
+/usr/local/pspdev/psp/include/time.h:
+
+/usr/local/pspdev/psp/include/machine/time.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/string:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/stringfwd.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/char_traits.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/postypes.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/cwchar:
+
+/usr/local/pspdev/psp/include/wchar.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/cstdint:
+
+/usr/local/pspdev/lib/gcc/psp/8.2.0/include/stdint.h:
+
+/usr/local/pspdev/psp/include/stdint.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/localefwd.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/psp/bits/c++locale.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/clocale:
+
+/usr/local/pspdev/psp/include/locale.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/iosfwd:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/cctype:
+
+/usr/local/pspdev/psp/include/ctype.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/ostream_insert.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/cxxabi_forced.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/stl_function.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/backward/binders.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/basic_string.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/ext/atomicity.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/psp/bits/gthr.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/psp/bits/gthr-default.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/psp/bits/atomic_word.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/ext/string_conversions.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/cstdlib:
+
+/usr/local/pspdev/psp/include/stdlib.h:
+
+/usr/local/pspdev/psp/include/machine/stdlib.h:
+
+/usr/local/pspdev/psp/include/alloca.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/std_abs.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/cstdio:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/cerrno:
+
+/usr/local/pspdev/psp/include/errno.h:
+
+/usr/local/pspdev/psp/include/sys/errno.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/basic_string.tcc:
+
+/usr/local/pspdev/psp/include/dirent.h:
+
+/usr/local/pspdev/psp/include/sys/dirent.h:
+
+/usr/local/pspdev/psp/sdk/include/pspiofilemgr_dirent.h:
+
+/usr/local/pspdev/psp/sdk/include/pspiofilemgr_stat.h:
+
+/usr/local/pspdev/psp/sdk/include/psptypes.h:
+
+/usr/local/pspdev/psp/sdk/include/pspkerneltypes.h:
+
+/usr/local/pspdev/psp/include/unistd.h:
+
+/usr/local/pspdev/psp/include/sys/unistd.h:
+
+../../include/support.h:
+
+/usr/local/pspdev/psp/include/string.h:
+
+/usr/local/pspdev/psp/include/sys/cdefs.h:
+
+/usr/local/pspdev/psp/include/sys/string.h:
+
+/usr/local/pspdev/psp/include/strings.h:
+
+/usr/local/pspdev/psp/include/SDL/SDL.h:
+
+/usr/local/pspdev/psp/include/SDL/SDL_main.h:
+
+/usr/local/pspdev/psp/include/SDL/SDL_stdinc.h:
+
+/usr/local/pspdev/psp/include/SDL/SDL_config.h:
+
+/usr/local/pspdev/psp/include/SDL/SDL_platform.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/stdlib.h:
+
+/usr/local/pspdev/psp/include/inttypes.h:
+
+/usr/local/pspdev/psp/include/iconv.h:
+
+/usr/local/pspdev/psp/include/reent.h:
+
+/usr/local/pspdev/psp/include/SDL/begin_code.h:
+
+/usr/local/pspdev/psp/include/SDL/close_code.h:
+
+/usr/local/pspdev/psp/include/SDL/SDL_audio.h:
+
+/usr/local/pspdev/psp/include/SDL/SDL_error.h:
+
+/usr/local/pspdev/psp/include/SDL/SDL_endian.h:
+
+/usr/local/pspdev/psp/include/SDL/SDL_mutex.h:
+
+/usr/local/pspdev/psp/include/SDL/SDL_thread.h:
+
+/usr/local/pspdev/psp/include/SDL/SDL_rwops.h:
+
+/usr/local/pspdev/psp/include/SDL/SDL_cdrom.h:
+
+/usr/local/pspdev/psp/include/SDL/SDL_cpuinfo.h:
+
+/usr/local/pspdev/psp/include/SDL/SDL_events.h:
+
+/usr/local/pspdev/psp/include/SDL/SDL_active.h:
+
+/usr/local/pspdev/psp/include/SDL/SDL_keyboard.h:
+
+/usr/local/pspdev/psp/include/SDL/SDL_keysym.h:
+
+/usr/local/pspdev/psp/include/SDL/SDL_mouse.h:
+
+/usr/local/pspdev/psp/include/SDL/SDL_video.h:
+
+/usr/local/pspdev/psp/include/SDL/SDL_joystick.h:
+
+/usr/local/pspdev/psp/include/SDL/SDL_quit.h:
+
+/usr/local/pspdev/psp/include/SDL/SDL_loadso.h:
+
+/usr/local/pspdev/psp/include/SDL/SDL_timer.h:
+
+/usr/local/pspdev/psp/include/SDL/SDL_version.h:

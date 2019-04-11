@@ -1,0 +1,89 @@
+vga_crtc.o: vga_crtc.cpp /usr/local/pspdev/psp/include/c++/8.2.0/stdlib.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/cstdlib \
+ /usr/local/pspdev/psp/include/c++/8.2.0/psp/bits/c++config.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/psp/bits/os_defines.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/psp/bits/cpu_defines.h \
+ /usr/local/pspdev/psp/include/stdlib.h \
+ /usr/local/pspdev/psp/include/machine/ieeefp.h \
+ /usr/local/pspdev/psp/include/_ansi.h \
+ /usr/local/pspdev/psp/include/newlib.h \
+ /usr/local/pspdev/psp/include/sys/config.h \
+ /usr/local/pspdev/psp/include/sys/features.h \
+ /usr/local/pspdev/lib/gcc/psp/8.2.0/include/stddef.h \
+ /usr/local/pspdev/psp/include/sys/reent.h \
+ /usr/local/pspdev/psp/include/_ansi.h \
+ /usr/local/pspdev/psp/include/sys/_types.h \
+ /usr/local/pspdev/psp/include/machine/_types.h \
+ /usr/local/pspdev/psp/include/machine/_default_types.h \
+ /usr/local/pspdev/psp/include/sys/lock.h \
+ /usr/local/pspdev/psp/include/machine/stdlib.h \
+ /usr/local/pspdev/psp/include/alloca.h \
+ /usr/local/pspdev/psp/include/c++/8.2.0/bits/std_abs.h \
+ ../../include/dosbox.h ../../config.h ../../include/logging.h \
+ ../../include/inout.h ../../include/vga.h ../../include/debug.h \
+ ../../include/cpu.h ../../include/regs.h ../../include/mem.h \
+ ../../include/video.h ../../include/pic.h
+
+/usr/local/pspdev/psp/include/c++/8.2.0/stdlib.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/cstdlib:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/psp/bits/c++config.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/psp/bits/os_defines.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/psp/bits/cpu_defines.h:
+
+/usr/local/pspdev/psp/include/stdlib.h:
+
+/usr/local/pspdev/psp/include/machine/ieeefp.h:
+
+/usr/local/pspdev/psp/include/_ansi.h:
+
+/usr/local/pspdev/psp/include/newlib.h:
+
+/usr/local/pspdev/psp/include/sys/config.h:
+
+/usr/local/pspdev/psp/include/sys/features.h:
+
+/usr/local/pspdev/lib/gcc/psp/8.2.0/include/stddef.h:
+
+/usr/local/pspdev/psp/include/sys/reent.h:
+
+/usr/local/pspdev/psp/include/_ansi.h:
+
+/usr/local/pspdev/psp/include/sys/_types.h:
+
+/usr/local/pspdev/psp/include/machine/_types.h:
+
+/usr/local/pspdev/psp/include/machine/_default_types.h:
+
+/usr/local/pspdev/psp/include/sys/lock.h:
+
+/usr/local/pspdev/psp/include/machine/stdlib.h:
+
+/usr/local/pspdev/psp/include/alloca.h:
+
+/usr/local/pspdev/psp/include/c++/8.2.0/bits/std_abs.h:
+
+../../include/dosbox.h:
+
+../../config.h:
+
+../../include/logging.h:
+
+../../include/inout.h:
+
+../../include/vga.h:
+
+../../include/debug.h:
+
+../../include/cpu.h:
+
+../../include/regs.h:
+
+../../include/mem.h:
+
+../../include/video.h:
+
+../../include/pic.h:

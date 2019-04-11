@@ -1,0 +1,8 @@
+debug_win32.o: debug_win32.cpp ../../include/dosbox.h ../../config.h \
+ ../../include/logging.h
+
+../../include/dosbox.h:
+
+../../config.h:
+
+../../include/logging.h:
