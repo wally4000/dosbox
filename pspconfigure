@@ -1,0 +1,1 @@
+LDFLAGS=-L/usr/local/pspdev/psp/sdk/lib -lc -lstdc++ -lpspuser -lpspnet_inet  CXXFLAGS=-I/usr/local/pspdev/psp/sdk/include -I/usr/local/pspdev/psp/include -G0 ./configure --host=psp --prefix=/usr/local/pspdev/psp --with-sdl-prefix=/usr/local/pspdev/psp/ --disable-sdltest --disable-opengl
