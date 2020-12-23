@@ -127,6 +127,20 @@ struct private_hwdata {
 #include <os2.h>
 #endif
 
+#ifdef PSP
+#include <pspsdk.h>
+#include <pspdebug.h>
+#include <pspkernel.h>
+#include <pspdisplay.h>
+#include <pspctrl.h>
+#include <pspirkeyb.h>
+#endif
+
+
+PSP_MODULE_INFO("DOSBox", 0, 1, 1);
+PSP_HEAP_SIZE_KB(-1);
+PSP_MAIN_THREAD_ATTR(PSP_THREAD_ATTR_USER|PSP_THREAD_ATTR_VFPU);
+
 enum SCREEN_TYPES	{
 	SCREEN_SURFACE,
 	SCREEN_SURFACE_DDRAW,
@@ -1849,7 +1863,7 @@ static void launcheditor() {
 	}*/
 	std::string edit;
 	while(control->cmdline->FindString("-editconf",edit,true)) //Loop until one succeeds
-		execlp(edit.c_str(),edit.c_str(),path.c_str(),(char*) 0);
+		// execlp(edit.c_str(),edit.c_str(),path.c_str(),(char*) 0);
 	//if you get here the launching failed!
 	printf("can't find editor(s) specified at the command line.\n");
 	exit(1);
@@ -1873,18 +1887,18 @@ void restart_program(std::vector<std::string> & parameters) {
 	DEBUG_ShutDown(NULL);
 #endif
 
-	if(execvp(newargs[0], newargs) == -1) {
-#ifdef WIN32
-		if(newargs[0][0] == '\"') {
-			//everything specifies quotes around it if it contains a space, however my system disagrees
-			std::string edit = parameters[0];
-			edit.erase(0,1);edit.erase(edit.length() - 1,1);
-			//However keep the first argument of the passed argv (newargs) with quotes, as else repeated restarts go wrong.
-			if(execvp(edit.c_str(), newargs) == -1) E_Exit("Restarting failed");
-		}
-#endif
-		E_Exit("Restarting failed");
-	}
+	// if(execvp(newargs[0], newargs) == -1) {
+// #ifdef WIN32
+		// if(newargs[0][0] == '\"') {
+			// //everything specifies quotes around it if it contains a space, however my system disagrees
+			// std::string edit = parameters[0];
+			// edit.erase(0,1);edit.erase(edit.length() - 1,1);
+			// //However keep the first argument of the passed argv (newargs) with quotes, as else repeated restarts go wrong.
+			// if(execvp(edit.c_str(), newargs) == -1) E_Exit("Restarting failed");
+		// }
+// #endif
+		// E_Exit("Restarting failed");
+	// }
 	free(newargs);
 }
 void Restart(bool pressed) { // mapper handler
@@ -1912,7 +1926,7 @@ static void launchcaptures(std::string const& edit) {
 		exit(1);
 	}*/
 
-	execlp(edit.c_str(),edit.c_str(),path.c_str(),(char*) 0);
+	// execlp(edit.c_str(),edit.c_str(),path.c_str(),(char*) 0);
 	//if you get here the launching failed!
 	printf("can't find filemanager %s\n",edit.c_str());
 	exit(1);

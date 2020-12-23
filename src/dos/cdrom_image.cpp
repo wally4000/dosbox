@@ -33,8 +33,8 @@
 #include "setup.h"
 
 #if !defined(WIN32)
-#include <libgen.h>
-#else
+// #include <libgen.h>
+// #else
 #include <string.h>
 #endif
 
@@ -421,7 +421,7 @@ bool CDROM_Interface_Image::CanReadPVD(TrackFile *file, int sectorSize, bool mod
 			(pvd[8] == 1 && !strncmp((char*)(&pvd[9]), "CDROM", 5) && pvd[14] == 1));
 }
 
-#if defined(WIN32)
+// #if defined(WIN32)
 static string dirname(char * file) {
 	char * sep = strrchr(file, '\\');
 	if (sep == NULL)
@@ -435,7 +435,7 @@ static string dirname(char * file) {
 		return tmp;
 	}
 }
-#endif
+// #endif
 
 bool CDROM_Interface_Image::LoadCueSheet(char *cuefile)
 {
