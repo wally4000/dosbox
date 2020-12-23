@@ -246,8 +246,8 @@ bool VideoCodec::SetupDecompress( int _width, int _height) {
 	height = _height;
 	pitch = _width + 2*MAX_VECTOR;
 	format = ZMBV_FORMAT_NONE;
-	if (inflateInit (&zstream) != Z_OK)
-		return false;
+	// if (inflateInit (&zstream) != Z_OK)
+		// return false;
 	return true;
 }
 
@@ -299,7 +299,7 @@ bool VideoCodec::PrepareCompressFrame(int flags,  zmbv_format_t _format, char * 
 			}
 		}
 		/* Restart deflate */
-		deflateReset(&zstream);
+		// deflateReset(&zstream);
 	} else {
 		if (palsize && pal && memcmp(pal, palette, palsize * 4)) {
 			*firstByte |= Mask_DeltaPalette;
@@ -421,7 +421,7 @@ bool VideoCodec::DecompressFrame(void * framedata, int size) {
 			return false;
 		if (format != (zmbv_format_t)header->format && !SetupBuffers((zmbv_format_t)header->format, header->blockwidth, header->blockheight))
 			return false;
-		inflateReset(&zstream);
+		// inflateReset(&zstream);
 	} 
 	zstream.next_in = (Bytef *)data;
 	zstream.avail_in = size;
